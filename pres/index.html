@@ -12,6 +12,12 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<style>
+			#intro img{ border: none; background: none; position: absolute; }
+			#intro #ssr{top: 0px; left: 0px; }
+			#intro #vue{top: -50px; left: 750px; }
+		</style>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -24,9 +30,11 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h1>SSR with Vue</h1>
-					<p>A discussion about server side rendering and practical usages with Vue.</p>
+				<section id="intro">
+					<img src="ssr-logo.png" id="ssr"/>
+					<h1>with</h1>
+					<img src="vue-logo.png" id="vue" width="200"/>
+					<p>A discussion about server side rendering and practical usages with Vue.js</p>
 				</section>
 				<section>
 					<h3>About Justin</h3>
@@ -70,15 +78,25 @@
 				<section>
 					<h3>SSR Traditionally Consists of:</h3>
 
-					<ul>
-						<li class="fragment fade-up">Server: or rendering FrontEnd, but also not nessacarily Node. 
-							<small>There are other projects, Nashorn (Oracle), php-v8js (you can run JS from PHP) too.</small>
-						</li>
-						<li class="fragment fade-up">Client: Library for Rendering (for our case, this is Vue.js)</li>
-						<li class="fragment fade-up">
-							<small>External APIs still exist, and are typically separated from the rendering server.</small>
-						</li>
-					</ul>
+					<section>
+						<ul>
+							<li class="fragment fade-up">Server: or rendering FrontEnd, but also not nessacarily Node. 
+								<small>There are other projects, Nashorn (Oracle), php-v8js (you can run JS from PHP) too.</small>
+							</li>
+							<li class="fragment fade-up">Client: Library for Rendering</li>
+							<li class="fragment fade-up">
+								External APIs still exist, and are typically separated from the rendering server.
+							</li>
+						</ul>
+					</section>
+
+					<section>  
+						<img src="separated.png"/>
+					</section>
+
+					<section>
+						<img src="together.png"/>
+					</section>
 				</section>
 
 				<section>
@@ -123,21 +141,24 @@
 
 				<section>
 					<h3>Other Projects:</h3>
-					<strong class="fragment fade-up">Meteor.js</strong><br>
-					<strong class="fragment fade-up">React:</strong> Next.js<br>
-					<strong class="fragment fade-up">Vue:</strong> Nuxt.js<br>
-					<strong class="fragment fade-up">Preact:</strong> Mobius?
+					<ul>
+						<li class="fragment fade-up"><strong>Meteor.js</strong></li>
+						<li class="fragment fade-up"><strong>React:</strong> Next.js<br></li>
+						<li class="fragment fade-up"><strong>Vue:</strong> Nuxt.js</li>
+						<li class="fragment fade-up"><strong>Preact:</strong> Mobius?</li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>Nuxt.js</h3>
 					<p>SSR Application Framework that focuses on UI rendering while abstracting away the client/server model.</p>
 					<p>Like many other frameworks, they have a particular directory structure and means to hook into</p>
+					<p><a href="https://nuxtjs.org/guide">nuxtjs.org</a></p>
 				</section>
 
 				<section>
 					<h1>Demo!</h1>
-					<code class="fragment fade-up">npm install -g vue-cli</code>
+					<code class="fragment fade-up">npm install -g vue-cli</code><br>
 					<code class="fragment fade-up">vue init nuxt-community/starter-template <project-name></code>
 				</section>
 
@@ -155,7 +176,7 @@
 						/teams/:id/roster<br>
 						/people/:id<br>
 					</code>
-					<small>+ much more...</small>
+					<small>+ probably much more...</small>
 				</section>
 
 
