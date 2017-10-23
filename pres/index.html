@@ -43,7 +43,7 @@
 						<p>Started with Winamp Skins and making games w/ the C++/Math Library. </p>
 						<p>Has been developing with Javascript for over 10 years. </p>
 					</section>
-					<section>
+					<!-- <section>
 						<p>
 							Once played a game of name the Browser with the inventor of Hakum Lie, Inventor of CSS. 
 							<small>(Aaaron from Invision was there, Molly from CSS Zen Garden)</small>
@@ -52,66 +52,93 @@
 							Was roommates in Baltimore with Lokesh Dhakar, Creator of Lightbox.js 
 						</p>
 						<p class="fragment fade-up">
-								Great, Great, Great, Great, Great, Great, Great Nephew of Ben Franklin.
+							Great, Great, Great, Great, Great, Great, Great Nephew of Ben Franklin.
 						</p>
-					</section>
+					</section> -->
 				</section>
 
 				<section>
 					<h3>History of SSR</h3>
-				</section>
-
-				<section>
-					<h3>My Experience</h3>
+					<ul>
+						<li class="fragment fade-up">2008: Web2.0 and XHR</li>
+						<li class="fragment fade-up">2009: Node.js</li>
+						<li class="fragment fade-up">2010: npm - node package manager</li>
+						<li class="fragment fade-up">2012: #NewTwitter & IsoMorphic JS</li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>SSR Traditionally Consists of:</h3>
+
+					<ul>
+						<li class="fragment fade-up">Server: or rendering FrontEnd, but also not nessacarily Node. 
+							<small>There are other projects, Nashorn (Oracle), php-v8js (you can run JS from PHP) too.</small>
+						</li>
+						<li class="fragment fade-up">Client: Library for Rendering (for our case, this is Vue.js)</li>
+						<li class="fragment fade-up">
+							<small>External APIs still exist, and are typically separated from the rendering server.</small>
+						</li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>Pros</h3>
 					<ul>
-						<li>Better SEO</li>
-						<li>Fast Page Load!</li>
-						<li>Extreme Caching!!</li>
-						<li>Overall Better UX Control</li>
+						<li class="fragment fade-up">Better SEO</li>
+						<li class="fragment fade-up">Fast Page Load!</li>
+						<li class="fragment fade-up">Extreme Caching!!</li>
+						<li class="fragment fade-up">Overall Better UX Control</li>
+						<li class="fragment fade-up">Better Error Handling</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>My Experience</h3>
+					<ul>
+						<li class="fragment fade-up">Researching JS libraries to create a UI</li>
+						<li class="fragment fade-up">Found Vue</li>
+						<li class="fragment fade-up">Found Nuxt</li>
+						<li class="fragment fade-up">Built a prototype</li>
+						<li class="fragment fade-up">Ripped out Nuxt</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3>Cons</h3>
 					<ul>
-						<li>More Complex Deployment</li>
-						<li>Development Constraints</li>
-						<li>More Server Load</li>
+						<li class="fragment fade-up">More Complex Deployment</li>
+						<li class="fragment fade-up">Development Constraints</li>
+						<li class="fragment fade-up">More Server Load</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3>SSR with Vue</h3>
-					<a href="http://ssr.vuejs.org">ssr.vuejs.org</a>
+					<ul>
+						<li class="fragment fade-up"><a href="http://ssr.vuejs.org">ssr.vuejs.org</a></li>
+						<li class="fragment fade-up">Vue v2.5 supports alternative backends with SSR</li>
+						<li class="fragment fade-up"><a href="https://github.com/vuejs/vue-hackernews-2.0">HackerNews Example</a></li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>Other Projects:</h3>
-					<strong>Meteor.js</strong>
-					<strong>React:</strong> Next.js<br>
-					<strong>Vue:</strong> Nuxt.js<br>
-					<strong>Preact:</strong>Mobius
+					<strong class="fragment fade-up">Meteor.js</strong><br>
+					<strong class="fragment fade-up">React:</strong> Next.js<br>
+					<strong class="fragment fade-up">Vue:</strong> Nuxt.js<br>
+					<strong class="fragment fade-up">Preact:</strong> Mobius?
 				</section>
 
 				<section>
 					<h3>Nuxt.js</h3>
-					<p>SSR Application Framework</p>
+					<p>SSR Application Framework that focuses on UI rendering while abstracting away the client/server model.</p>
+					<p>Like many other frameworks, they have a particular directory structure and means to hook into</p>
 				</section>
 
 				<section>
-					<h3>Demo!</h3>
-					<code>
-						Nuxt out of the box...<br>
-						- Create an API Explorer with Axios + Nuxt
-					</code>
+					<h1>Demo!</h1>
+					<code class="fragment fade-up">npm install -g vue-cli</code>
+					<code class="fragment fade-up">vue init nuxt-community/starter-template <project-name></code>
 				</section>
 
 				<section>
@@ -123,11 +150,12 @@
 				<section>
 					<h3>NHL API</h3>
 					<code>
-						/teams
-						/teams/:id
-						/teams/:id/roster
-						/people/:id
+						/teams<br>
+						/teams/:id<br>
+						/teams/:id/roster<br>
+						/people/:id<br>
 					</code>
+					<small>+ much more...</small>
 				</section>
 
 
